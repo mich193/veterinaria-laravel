@@ -23,8 +23,8 @@
         </div>
 
        <nav class="sidebar-nav">
-    <!-- Botón Inicio (Casita) -> Redirige al Login -->
-    <a href="{{ route('login') }}" class="nav-item">
+    <!-- Botón Inicio (Casita) -> Redirige al Inicio -->
+    <a href="{{ route('dashboard') }}" class="nav-item">
         <i class="fa-solid fa-house"></i> <span>Inicio</span>
     </a>
 
@@ -34,7 +34,7 @@
     </a>
 
     <!-- Botón Mis citas -> Redirige a la vista de citas -->
-    <a href="{{ route('citas') }}" class="nav-item">
+    <a href="{{ route('citas') }}" class="nav-item active">
         <i class="fa-solid fa-list-check"></i> <span>Mis citas</span>
     </a>
 

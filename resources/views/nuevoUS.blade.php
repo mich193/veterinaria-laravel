@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registro - Healthy Pets</title>
   <link rel="stylesheet" href="{{ asset('css/global.css') }}">
   <link rel="stylesheet" href="{{ asset('css/nuevoUS.css') }}">
@@ -33,7 +34,7 @@
                 <p class="auth-subtitle">Crea tu cuenta para acceder al sistema</p>
 
                 @if ($errors->any())
-                    <div class="alert-error">
+                    <div class="alert-error" style="color:#c0392b;margin-bottom:12px;">
                         {{ $errors->first() }}
                     </div>
                 @endif
@@ -64,7 +65,10 @@
 
                     <div class="input-icon-group">
                         <i class="bx bx-phone"></i>
-                        <input type="text" name="telefono" value="{{ old('telefono') }}" placeholder="Teléfono" required>
+                        <input type="tel" name="telefono" value="{{ old('telefono') }}" placeholder="Teléfono (10 dígitos)"
+                               inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10"
+                               title="El teléfono debe tener exactamente 10 dígitos"
+                               oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)" required>
                     </div>
 
                     <div class="input-icon-group">
@@ -82,7 +86,7 @@
                         <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" required>
                     </div>
 
-                    <button type="submit" class="btn-primary">Registrarse</button>
+                    <button type="submit" class="btn-register">Registrarse</button>
                 </form>
 
                 <div class="auth-footer">

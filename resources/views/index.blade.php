@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agendar Cita - Healthy Pets</title>
   <link rel="stylesheet" href="{{ asset('css/global.css') }}">
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">
@@ -22,13 +23,13 @@
       </div>
       <nav class="sidebar-nav">
   
-    <!-- Botón Inicio (Casita) -> Redirige al Login -->
-    <a href="{{ route('login') }}" class="nav-item">
+    <!-- Botón Inicio (Casita) -> Redirige al Inicio -->
+    <a href="{{ route('dashboard') }}" class="nav-item">
         <i class="fa-solid fa-house"></i> <span>Inicio</span>
     </a>
 
     <!-- Botón Agendar cita (Calendario) -> Redirige al index -->
-    <a href="{{ route('home') }}" class="nav-item">
+    <a href="{{ route('home') }}" class="nav-item active">
         <i class="fa-regular fa-calendar-days"></i> <span>Agendar cita</span>
     </a>
 

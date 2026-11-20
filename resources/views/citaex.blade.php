@@ -24,8 +24,8 @@
         </div>
         
         <nav class="sidebar-nav">
-    <!-- Botón Inicio (Casita) -> Redirige al Login -->
-    <a href="{{ route('login') }}" class="nav-item">
+    <!-- Botón Inicio (Casita) -> Redirige al Inicio -->
+    <a href="{{ route('dashboard') }}" class="nav-item">
         <i class="fa-solid fa-house"></i> <span>Inicio</span>
     </a>
 

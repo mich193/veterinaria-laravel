@@ -14,7 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'sesion' => \App\Http\Middleware\VerificarSesion::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         // 1. Manejador para rutas inexistentes (404 general)

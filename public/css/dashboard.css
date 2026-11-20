@@ -1,0 +1,503 @@
+/* --- Logo de la barra lateral --- */
+.paw-icon-top {
+  font-size: 28px;
+  color: #8c4a53;
+}
+
+.sidebar-logo h2 {
+  font-size: 1.2rem;
+  color: #4a2c31;
+  margin: 0;
+}
+
+/* --- Contenido Principal --- */
+.inicio-contenido {
+  flex: 1;
+  padding: 28px;
+  min-width: 0;
+}
+
+.inicio-panel {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 28px 32px;
+  box-shadow: 0 8px 30px rgba(74, 44, 49, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+}
+
+/* --- Encabezado --- */
+.inicio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.inicio-header h1 {
+  font-size: 1.6rem;
+  color: #2b1d20;
+}
+
+.inicio-header p {
+  color: #8c7377;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+.inicio-acciones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fecha-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid #eee3e5;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #4a2c31;
+  background-color: #ffffff;
+}
+
+.btn-agregar-usuario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background-color: #8c4a53;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-agregar-usuario:hover {
+  background-color: #723b43;
+}
+
+/* --- Menú de usuario --- */
+.menu-usuario {
+  position: relative;
+}
+
+.circulo-usuario {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #f6d4dc;
+  color: #8c4a53;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #eee3e5;
+  cursor: pointer;
+}
+
+.circulo-usuario:hover {
+  box-shadow: 0 0 0 2px #c98290;
+}
+
+.menu-usuario-opciones {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 46px;
+  min-width: 220px;
+  background-color: #ffffff;
+  border: 1px solid #f0e6e8;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(74, 44, 49, 0.12);
+  padding: 6px;
+  z-index: 50;
+}
+
+.menu-usuario-opciones.abierto {
+  display: block;
+}
+
+.menu-usuario-datos {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0e6e8;
+  margin-bottom: 4px;
+}
+
+.menu-usuario-datos strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #2b1d20;
+}
+
+.menu-usuario-datos span {
+  font-size: 0.78rem;
+  color: #8c7377;
+  word-break: break-all;
+}
+
+.btn-cerrar-sesion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #c0392b;
+  cursor: pointer;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #f7f3f4;
+}
+
+/* --- Tarjetas de resumen --- */
+.tarjetas-resumen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tarjeta-resumen {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border: 1px solid #f0e6e8;
+  border-radius: 14px;
+  background-color: #ffffff;
+}
+
+.tarjeta-titulo {
+  font-size: 0.8rem;
+  color: #8c7377;
+}
+
+.tarjeta-numero {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b1d20;
+  margin: 4px 0;
+}
+
+.tarjeta-numero small {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #8c7377;
+}
+
+.tarjeta-detalle {
+  font-size: 0.78rem;
+  color: #8c7377;
+}
+
+.tarjeta-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.tarjeta-icono.chico {
+  width: 34px;
+  height: 34px;
+  font-size: 0.85rem;
+}
+
+.icono-rosa    { background-color: #fde7ec; color: #d14d6b; }
+.icono-naranja { background-color: #fff1de; color: #e08a1e; }
+.icono-morado  { background-color: #f1e8fb; color: #8a5cc7; }
+
+/* --- Banner de bienvenida --- */
+.tarjeta-bienvenida {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #f6d4dc 0%, #f9e1e6 60%, #f3dcd6 100%);
+  min-height: 190px;
+}
+
+.bienvenida-texto {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bienvenida-frase {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9a6b73;
+}
+
+.bienvenida-texto h2 {
+  font-size: 1.7rem;
+  color: #5c1f2e;
+}
+
+.bienvenida-texto p {
+  color: #6b4d52;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.bienvenida-imagen {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #f1d9d3;
+}
+
+.bienvenida-imagen img {
+  max-width: 100%;
+  max-height: 210px;
+  object-fit: contain;
+  display: block;
+}
+
+/* --- Doctores de hoy --- */
+.doctores-hoy {
+  border: 1px solid #f0e6e8;
+  border-radius: 16px;
+  padding: 20px 22px;
+}
+
+.doctores-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.doctores-encabezado h3 {
+  font-size: 1.05rem;
+  color: #2b1d20;
+}
+
+.doctores-encabezado p {
+  font-size: 0.82rem;
+  color: #8c7377;
+  margin-top: 2px;
+}
+
+.doctores-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.doctor-tarjeta {
+  padding: 4px 18px;
+  border-right: 1px solid #f0e6e8;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.doctor-tarjeta:first-child {
+  padding-left: 0;
+}
+
+.doctor-tarjeta:last-child {
+  border-right: none;
+}
+
+.doctor-datos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doctor-iniciales {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f6d4dc;
+  color: #8c4a53;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doctor-nombre {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.doctor-nombre strong {
+  font-size: 0.9rem;
+  color: #2b1d20;
+}
+
+.doctor-nombre span {
+  font-size: 0.78rem;
+  color: #8c7377;
+}
+
+.doctor-turno {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.doctor-turno small {
+  font-size: 0.72rem;
+  color: #8c7377;
+  white-space: nowrap;
+}
+
+.en-turno,
+.fuera-turno {
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.en-turno    { color: #2e9e6a; }
+.fuera-turno { color: #a3969a; }
+
+.doctor-siguiente {
+  background-color: #f7f3f4;
+  border-radius: 10px;
+  padding: 14px;
+  min-height: 52px;
+  font-size: 0.8rem;
+  color: #6b4d52;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctor-siguiente i {
+  color: #c98290;
+}
+
+.sin-doctores {
+  font-size: 0.9rem;
+  color: #8c7377;
+}
+
+/* --- Pie --- */
+.inicio-pie {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #8c7377;
+}
+
+.inicio-pie i {
+  color: #d14d6b;
+}
+
+
+/* --- Pantallas medianas --- */
+@media (max-width: 1100px) {
+  .doctores-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-tarjeta,
+  .doctor-tarjeta:first-child {
+    padding: 14px 0;
+    border-right: none;
+    border-bottom: 1px solid #f0e6e8;
+  }
+
+  .doctor-tarjeta:last-child {
+    border-bottom: none;
+  }
+}
+
+/* --- Celular --- */
+@media (max-width: 860px) {
+  .inicio-contenido {
+    padding: 12px;
+  }
+
+  .inicio-panel {
+    padding: 18px 16px;
+    gap: 16px;
+  }
+
+  .inicio-header h1 {
+    font-size: 1.3rem;
+    padding-right: 48px; /* espacio para el círculo del usuario */
+  }
+
+  .inicio-acciones {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* el círculo del usuario se queda arriba a la derecha */
+  .menu-usuario {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .fecha-chip {
+    font-size: 0.78rem;
+    padding: 7px 10px;
+  }
+
+  .btn-agregar-usuario {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+  }
+
+  .tarjetas-resumen {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tarjeta-numero {
+    font-size: 1.6rem;
+  }
+
+  .tarjeta-bienvenida {
+    grid-template-columns: 1fr;
+  }
+
+  .bienvenida-texto {
+    padding: 20px;
+  }
+
+  .bienvenida-texto h2 {
+    font-size: 1.3rem;
+  }
+
+  .bienvenida-imagen img {
+    max-height: 150px;
+  }
+
+  .doctores-hoy {
+    padding: 16px;
+  }
+
+  .inicio-pie {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

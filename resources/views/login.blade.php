@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Iniciar Sesión - Healthy Pets</title>
   <link rel="stylesheet" href="{{ asset('css/global.css') }}">
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
@@ -33,12 +34,17 @@
                     {{ session('success') }}
                 </div>
             @endif
+      @if ($errors->any())
+        <div class="alert-error" style="color:#c0392b;margin-bottom:12px;">
+          {{ $errors->first() }}
+        </div>
+      @endif
       <form action="{{ route('login.submit') }}" method="POST" class="login-form">
-        <!-- Campo Usuario -->
+        <!-- Campo Correo (con el que te registraste) -->
          @csrf
         <div class="input-icon-group">
-          <i class="fa-regular fa-user icon"></i>
-          <input type="text" name="email" value="{{ old('email') }}" placeholder="Usuario" required>
+          <i class="fa-regular fa-envelope icon"></i>
+          <input type="email" name="email" value="{{ old('email') }}" placeholder="Correo electrónico" required>
         </div>
 
         <!-- Campo Contraseña -->

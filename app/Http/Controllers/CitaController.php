@@ -47,7 +47,7 @@ class CitaController extends Controller
     {
         $mascotas = DB::table('mascota_paciente')->get();
         $servicios = DB::table('servicio')->get();
-        $veterinarios = DB::table('veterinario')->get();
+        $veterinarios = DB::table('veterinario')->where('rol', 'doctor')->get();
 
         return view('index', compact('mascotas', 'servicios', 'veterinarios'));
     }

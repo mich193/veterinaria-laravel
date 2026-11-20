@@ -145,3 +145,23 @@
 .btn-cancelar:hover {
   background-color: #fff5f5;
 }
+/* --- Celular: lista de citas --- */
+@media (max-width: 860px) {
+  .form-container-wrapper {
+    padding: 20px 16px !important; /* la vista trae padding en línea */
+  }
+
+  #lista-citas {
+    padding: 14px !important;
+  }
+
+  #lista-citas h3 {
+    font-size: 1rem;
+  }
+
+  .btn-cancelar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}

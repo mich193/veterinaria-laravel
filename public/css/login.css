@@ -180,3 +180,43 @@ body {
 .btn-secondary:hover {
   background-color: #fcf8f8;
 }
+/* --- Celular: logo arriba y formulario abajo --- */
+@media (max-width: 860px) {
+  body {
+    align-items: flex-start;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .login-brand {
+    padding: 24px 20px 16px;
+  }
+
+  .login-brand h1 {
+    font-size: 1.3rem;
+  }
+
+  .ilustracion-mascotas img.mi-imagen-login {
+    width: 110px;
+  }
+
+  .login-card {
+    padding: 28px 20px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .login-options {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .input-icon-group input {
+    font-size: 16px;
+  }
+}
